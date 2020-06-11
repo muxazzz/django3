@@ -1,0 +1,33 @@
+Добро пожаловать в {{ title }}.
+<br>Тут собрано {{ books|length }} книг из моей личной коллекции.
+
+<table border="1">
+    <tr>
+        <td>НОМЕР</td>
+        <td>НАЗВАНИЕ КНИГИ</td>
+        <td>ISBN</td>
+        <td>ОПИСАНИЕ</td>
+        <td>ГОД</td>
+        <td>АВТОР</td>
+        <td>КОЛИЧЕСТВО КНИГ</td>
+        <td>КОМУ ОТДАЛИ</td>
+    </tr>
+    {% for book in books %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.ISBN }}</td>
+        <td>{{ book.description }}</td>
+        <td>{{ book.year_release }}</td>
+        <td>{{ book.author.full_name }}</td>
+        <td>{{ book.copy_count }}</td>
+        <td>{% if book.friend %}
+            {{ book.friend }}
+            {% else %}
+            КНИГА ДОМА
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
