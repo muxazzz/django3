@@ -31,5 +31,5 @@ urlpatterns = [
     path('authors', AuthorList.as_view(), name='author_list'), 
     path('author/create_many', author_create_many, name='author_create_many'),  
     path('author_book/create_many', books_authors_create_many, name='author_book_create_many'),
-    path("/publishers", PublisherList.as_view()),
+    path('publishers', PublisherList.as_view()),
 ]
