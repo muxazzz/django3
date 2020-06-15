@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from p_library import views
-from p_library.views import AuthorEdit, AuthorList, author_create_many, books_authors_create_many, 
+from p_library.views import AuthorEdit, AuthorList, author_create_many, books_authors_create_many, PublisherList
   
 app_name = 'p_library'  
 
