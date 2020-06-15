@@ -11,9 +11,19 @@ from django.views.generic import CreateView, ListView
 from django.urls import reverse_lazy
 from django.forms import formset_factory  
 from django.http.response import HttpResponseRedirect
+import json
 
-class PublisherList(ListView):
+from django.utils import timezone
+from django.views.generic.detail import DetailView
+
+class PublisherDetailView(DetailView):
+
     model = Book
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["now"] = timezone.now()
+        return context
 
 class AuthorEdit(CreateView):  
     model = Author  
