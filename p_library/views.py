@@ -12,7 +12,6 @@ from django.urls import reverse_lazy
 from django.forms import formset_factory  
 from django.http.response import HttpResponseRedirect
 import json
-
 from django.utils import timezone
 from django.views.generic.detail import DetailView
 
@@ -24,6 +23,19 @@ class PublisherDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context["now"] = timezone.now()
         return context
+
+class BookCreate(CreateView):
+    model = Book
+    fields = ['title']
+
+class BookUpdate(UpdateView):
+    model = Book
+    fields = ['title']
+
+class BookDelete(DeleteView):
+    model = Book
+    success_url = reverse_lazy('book-list')
+
 
 class AuthorEdit(CreateView):  
     model = Author  
