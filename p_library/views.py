@@ -7,7 +7,7 @@ from django.views.generic import ListView
 from django.shortcuts import redirect
 from p_library.models import Author  
 from p_library.forms import AuthorForm, BookForm
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, DeleteView, UpdateView
 from django.urls import reverse_lazy
 from django.forms import formset_factory  
 from django.http.response import HttpResponseRedirect
