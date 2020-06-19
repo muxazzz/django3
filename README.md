@@ -10,3 +10,11 @@ pip3 install pillow
 
 запускаем сервер
 python3 manage.py runserver
+
+далее заходим в админку
+http://127.0.0.1:8000/admin/
+
+логин
+admin
+password
+15101988
