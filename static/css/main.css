@@ -1,0 +1,18 @@
+html{
+height: 100%;
+background: rgb(22,4,2);
+color: white;
+}
+
+head{
+	font-weight: bold;
+	font-size: : 23px;
+}
+
+
+body {
+flex-direction: column;
+}
+table {
+background: rgb(122,111,122);  
+}

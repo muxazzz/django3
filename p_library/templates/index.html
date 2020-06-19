@@ -1,18 +1,9 @@
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <title>Библиотека</title>
-    <style>
-        body{
-         background-color: rgb(168, 185, 218);
-        }
-    </style>
-      </head>
+{% extends 'base.html' %}
+{% block content %}
+<h1>Библиотека</h1><br>
 Добро пожаловать в {{ title }}.
 <br>Тут собрано {{ books|length }} книг из моей личной коллекции.
-
-<table class="table">
+<table  class="table">
     <tr>
         <th scope="col">НОМЕР</th>
         <th scope="col">НАЗВАНИЕ КНИГИ</th>
@@ -26,6 +17,7 @@
     {% for book in books %}
     <tr>
         <td>{{ forloop.counter }}</td>
+        <td><img src="{{ book.avatar }}" width="102px" height="102px"></td>
         <td>{{ book.title }}</td>
         <td>{{ book.ISBN }}</td>
         <td>{{ book.description }}</td>
@@ -42,3 +34,4 @@
     {% endfor %}
 </table>
 
+{% endblock %}
