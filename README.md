@@ -6,7 +6,8 @@
 устанавливаем след. пакеты:
 pip3 install psycopg2-binary    
 pip3 install django-crispy-forms
-pip3 install pillow             
+pip3 install pillow 
+pip3 install django
 
 запускаем сервер
 python3 manage.py runserver
