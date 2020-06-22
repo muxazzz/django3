@@ -30,7 +30,7 @@ class Book(models.Model):
     copy_count = models.SmallIntegerField(default=1)
     publisher = models.ForeignKey(Publisher, blank=True, null=True, on_delete=models.CASCADE)
     friend = models.ForeignKey(Friend, blank=True, null=True, on_delete=models.CASCADE)
-    avatar = models.ImageField(verbose_name='Изображение книги', blank=True)
+    avatar = models.ImageField(upload_to='static/', verbose_name='Изображение книги', blank=True)
     
 
     def __str__(self):
