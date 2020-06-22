@@ -9,6 +9,10 @@ pip3 install django-crispy-forms
 pip3 install pillow 
 pip3 install django
 
+проводим миграции
+python3 manage.py makemigrations
+python3 manage.py migrate
+
 запускаем сервер
 python3 manage.py runserver
 
