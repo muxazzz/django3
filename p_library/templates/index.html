@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 <h1>Библиотека</h1><br>
 Добро пожаловать в {{ title }}.
 <br>Тут собрано {{ books|length }} книг из моей личной коллекции.
@@ -17,7 +18,7 @@
     {% for book in books %}
     <tr>
         <td>{{ forloop.counter }}</td>
-        <td><img src="{{ book.avatar }}" width="102px" height="102px"></td>
+        <td><img src="{% static '' %}{{ book.avatar }}" width="102px" height="102px"></td>
         <td>{{ book.title }}</td>
         <td>{{ book.ISBN }}</td>
         <td>{{ book.description }}</td>
